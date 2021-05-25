@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="script/script1.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+
+<div class="header">
+  <a href="#default" class="logo">Book My Bus</a>
+  <div class="header-right">
+    <a  href="#">Home</a>
+    <a href="#" >Book</a>
+    <a href="#">How It Works</a>
+    <a href="#">About</a>
+  </div>
+</div>
+<div style="display:flex;">
+<div style="width:200px;height:250px;">
+<div style="overflow:auto;">
+  <div class="menu">
+    <a href="#" id="credit_card" onclick="credit()" style="background-color:white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"class="bi bi-credit-card" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+  <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+</svg> Credit Card</a>
+    <a href="#" id="debit_card" onclick="debit()"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTM5OS44MDQgMTg4LjE2NmM2LjE4MyAwIDEyLjE1MS45NDIgMTcuNzY4IDIuNjg2bDUxLjE4MS01MS4xODEtMjMuODU0LTIzLjg1NC03Mi4zNDkgNzIuMzQ5eiIvPjxwYXRoIGQ9Im01MDMuMjEzIDE3NC4xMzItMTMuMjQ4LTEzLjI0OC00Ni4zNSA0Ni4zNWMxMC4wMyAxMC43MjkgMTYuMTg4IDI1LjEyMSAxNi4xODggNDAuOTMydjExLjgwMmw0My40MS00My40MWMxMS43MTYtMTEuNzE1IDExLjcxNi0zMC43MSAwLTQyLjQyNnoiLz48cGF0aCBkPSJtNDIzLjY4NiA5NC42MDUtODUuODE4LTg1LjgxOGMtMTEuNzE2LTExLjcxNi0zMC43MTEtMTEuNzE2LTQyLjQyNiAwbC0xNzkuMzggMTc5LjM4aDIxNC4wNjJ6Ii8+PHBhdGggZD0ibTc4LjczNCAzMTMuMjY0aDQ1LjcwMnYzMy43MzRoLTQ1LjcwMnoiLz48cGF0aCBkPSJtMzk5LjgwNCAyMTguMTY3aC0zNjkuODA0Yy0xNi41NjkgMC0zMCAxMy40MzEtMzAgMzB2MjMzLjgzM2MwIDE2LjU2OSAxMy40MzEgMzAgMzAgMzBoMzY5LjgwNGMxNi41NjggMCAzMC0xMy40MzEgMzAtMzB2LTIzMy44MzNjMC0xNi41NjktMTMuNDMyLTMwLTMwLTMwem0tMzUxLjA3IDY1LjA5N2gxMDUuNzAydjkzLjczNGgtMTA1LjcwMnptNTguMzYxIDE2My42MzhoLTU5LjI5NHYtMzBoNTkuMjk0em05MS42MzUgMGgtNTkuMjk0di0zMGg1OS4yOTR6bTkxLjYzNyAwaC01OS4yOTR2LTMwaDU5LjI5NHptOTEuNjM2IDBoLTU5LjI5NHYtMzBoNTkuMjk0eiIvPjwvZz48L3N2Zz4=" width=20px> Debit Card</a>
+    <a href="#" id="Gpay" onclick="gpayf()" ><img src="img/gpay.svg" width=30px> Google Pay</a>
+    <a href="#"  id="Upi" onclick="upif()" style="padding-top:20px"><img src="img/upi.svg" width=90px></a>
+  </div>
+</div>
+</div>
+ <div id="content" style="float:left;margin:10px;width:700px;height:418px;padding:130px;">
+<div style="display:block;"  id="credits">
+ Card Number:
+ <input type='name' name='credit_num' placeholder='Card Number'><br><br>
+ Expiry Date:
+ <input type='name' name='credit_expiry' style='width:90px;' placeholder='month/year'><br><br>
+ CVV:
+ <input type='name' name='credit_cvv' style='width:90px;' placeholder='CVV'><br><br>
+ <button onclick="credit_validate()" style='margin-left:120px;padding-left:15px;padding-right:17px;font-size:20px;'>Pay</button>
+ </div>
+<div style="display:none" id="debits">
+ Card Number:
+ <input type='name' name='debit_num' placeholder='Card Number'><br><br>
+ Expiry Date:
+ <input type='name' name='debit_expiry' style='width:90px;' placeholder='month/year'><br><br>
+ CVV:
+ <input type='name' name='debit_cvv' style='width:90px;' placeholder='CVV'><br><br>
+ <button onclick="debit_validate()" style='margin-left:120px;padding-left:15px;padding-right:17px;font-size:20px;'>Pay</button>
+ </div>
+<div style="display:none;margin-left:90px;"id="gpay"><img src=img/qr.png width=150px><br><br>Gpay Id:  <input type="name" name="gpayid" placeholder="Gpay Id"><br><br> <button onclick="gpay_validate()" style='margin-left:50px;padding-left:15px;padding-right:17px;font-size:20px;'>Paid</button>
+</div>
+<div style="display:none;margin-left:90px;"id="upi"><img src=img/qr.png width=150px><br><br>UPI Id:  <input type="name" name="upiid" placeholder="UPI Id"><br><br> <button onclick="upi_validate()"  style='margin-left:50px;padding-left:15px;padding-right:17px;font-size:20px;'>Paid</button>
+</div>
+ </div>
+ <div  style="float:left;margin:10px;width:320px;height:418px;"><br><b>Payment Info</b><br><hr><br>
+  Number of seats booked:<span id='seatnum'></span><br><br>
+  Cost per seat:<span id="cost"></span><br><br><hr>
+  <b>You Pay:<span id="pay"></span></b><br><hr>
+</div>
+
+</div>
+</body>
+</html>
